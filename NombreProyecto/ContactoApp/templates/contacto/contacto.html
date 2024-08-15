@@ -1,0 +1,33 @@
+
+{% extends "NombreApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+
+    {% if 'valido' in request.GET %}
+
+        <p>todo ok</p>
+
+    {% endif %}
+    
+<div/>
+
+ <form action = "" method= "POST">
+    {% csrf_token %}
+    <table style="color: white">{{formulario.as_table}}</table>
+    <input type="submit" value="Enviar">
+   
+ </form>
+
+
+
+
+<p style= "color: white;">{{request.POST}}</p>
+
+
+    
+
+{% endblock %}
