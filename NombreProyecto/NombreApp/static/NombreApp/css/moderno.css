@@ -15,12 +15,3 @@ body {
 
 
 
-.div2 {
-  grid-column-start: 2;
-}
-
-.div3 {
-  
-  grid-column-start: 3;
-  background-color: rgb(250, 248, 248) !important;
-}
