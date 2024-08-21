@@ -15,3 +15,28 @@ body {
 
 
 
+.principal {
+  width: 75%;
+}
+.sidebar {
+  width: 25%;
+}
+
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+p, div {
+ color: white ; 
+}
+
+div > {
+  color: white;
+}
+
+.collapse navbar-collapse {
+  font-size: 1.1rem;
+}
