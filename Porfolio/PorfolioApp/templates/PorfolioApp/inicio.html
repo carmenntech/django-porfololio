@@ -1,89 +1,151 @@
+{% load static %}
 
-.contenedor
-	form
-		- var pageTitle=['Home', 'Features', 'Adding pages', '+More', 'About', 'Dummy page', 'Dummy page'] //Add pages by adding title here
-		- var content = [
-		- 'Pure CSS One page Vertical navigation',
-		- 'two',
-		- 'three',
-		- 'four',
-		- 'five'
-		- ]
-		- for( var n = 0; n < pageTitle.length; n++)
-			if n==0
-				input(type="radio" id="Slide1" name="slider" titulo=""+pageTitle[0] autofocus checked)
-			else
-				input(type="radio" id="Slide"+[n+1] name="slider" titulo=""+pageTitle[n])
-			
-		.labels
-			- for( var n = 0; n < pageTitle.length; n++ )
-				if n==0
-					label(for="Slide"+[n+1] id="Slide"+[n+1] class="Slide")
-						.content: h1 <strong>Pure CSS</strong> one page vertical navigation
-						.icon
-							span: img(src="http://codecase.work/codepen/keyboard-icon.png")
-							span Use keyboard
-				else if n==1
-					label(for="Slide"+[n+1] id="Slide"+[n+1] class="Slide")
-						.content
-							h1 #{pageTitle[n]}
-							.block
-								span 
-									i.fa.fa-hashtag
-									br
-									| <strong>No JS</strong>
-									br
-									| CSS Rules!
-								span 
-									i.fa.fa-keyboard-o
-									br
-									| <strong>Keyboard navigation</strong>
-									br
-									| Yep, no kidding
-								span
-									i.fa.fa-bars
-									br
-									| <strong>Lateral menu</strong>
-								span
-									i.fa.fa-codepen
-									br
-									| <strong>Autogenerate pages</strong>
-									br
-									| Using Jade & SASS
-									
-				else if n==2
-					label(for="Slide"+[n+1] id="Slide"+[n+1] class="Slide")
-						.content
-							h1 #{pageTitle[n]}
-							.block: ol
-									li Add the pages title in the pageTitle array in the HTML editor to generate pages
-									li Add the number of pages in the $npages variable in the CSS editor
-				else if n==3
-					label(for="Slide"+[n+1] id="Slide"+[n+1] class="Slide")
-						.content
-							h1 #{pageTitle[n]}
-							.block
-								span: a(href="https://codepen.io/hrtzt/pen/NPZKRN" target="_blank") One Page Navigation CSS Menu
-								span: a(href="https://codepen.io/hrtzt/pen/YPoeWd" target="_blank") The simplest CSS switch
-								span: a(href="https://codepen.io/hrtzt/pen/JdYaEZ" target="_blank") Animated cube slider CSS only
-								span: a(href="https://codepen.io/hrtzt/pen/vGqEJO" target="_blank") Google photos album view with only CSS
-				
-				else if n==4
-					label(for="Slide"+[n+1] id="Slide"+[n+1] class="Slide")
-						.content
-							h1 #{pageTitle[n]}
-							.block
-								span
-									a(href="https://dribbble.com/albertohartzet" target="_blank")
-										i.fa.fa-dribbble  
-										| Dribbble me
-								span
-									a(href="https://twitter.com/hrtzt" target="_blank")
-										i.fa.fa-twitter
-										| Tweet me
-									
-				else
-					label(for="Slide"+[n+1] id="Slide"+[n+1])
-						.content
-							h1 #{pageTitle[n]}
-							.block Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis
+
+<html>
+
+<head>
+
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href= "{% static 'PorfolioApp/vendor/bootstrap/css/bootstrap.min.css'  %}" rel = "stylesheet"> 
+
+     <!-- Fonts -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <!-- <link href= "{% static '/NombreApp/css/gestion.css' %}"  rel="stylesheet">  -->
+    <link href= "{% static '/PorfolioApp/css/codepen.css' %}"  rel="stylesheet"> 
+</head>
+
+<body>
+
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+	<div class="py-4 px-3 mb-4 bg-light">
+		<div class="media d-flex align-items-center"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+			<div class="media-body">
+				<h4 class="m-0">Jason Doe</h4>
+				<p class="font-weight-light text-muted mb-0">Web developer</p>
+			</div>
+		</div>
+	</div>
+
+	<p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+	<ul class="nav flex-column bg-white mb-0">
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic bg-light">
+				<i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+				Home
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+				About
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+				Services
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+				Gallery
+			</a>
+		</li>
+	</ul>
+
+	<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
+
+	<ul class="nav flex-column bg-white mb-0">
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+				Area charts
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+				Bar charts
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+				Pie charts
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link text-dark font-italic">
+				<i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+				Line charts
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- End vertical navbar -->
+
+<!-- Page content holder -->
+<div class="page-content p-5" id="content">
+	<!-- Toggle button -->
+	<button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
+
+	<!-- Demo content -->
+	<h2 class="display-4 text-white">Bootstrap vertical nav</h2>
+	<p class="lead text-white mb-0">Build a fixed sidebar using Bootstrap 4 vertical navigation and media objects.</p>
+	<p class="lead text-white">Snippet by <a href="https://bootstrapious.com/snippets" class="text-white">
+			<u>Bootstrapious</u></a>
+	</p>
+	<div class="separator"></div>
+	<div class="row text-white">
+		<div class="col-lg-7">
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor.
+			</p>
+			<div class="bg-white p-5 rounded my-5 shadow-sm">
+				<p class="lead font-italic mb-0 text-muted">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+					irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+			</div>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor.
+			</p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor.
+			</p>
+		</div>
+		<div class="col-lg-5">
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor.
+			</p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor.
+			</p>
+		</div>
+	</div>
+
+</div>
+<!-- End demo content -->
+
+
+</body>
+
+
+</html>
