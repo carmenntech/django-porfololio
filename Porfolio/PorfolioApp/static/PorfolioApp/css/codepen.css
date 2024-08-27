@@ -12,6 +12,8 @@ html, body, .page{
   overflow: hidden; 
 }
 
+
+
 * {
   font-family: 'open sans', 'lato', 'helvetica', sans-serif;
 }
@@ -210,9 +212,9 @@ a {
 
 :root {
   --bg: #00000000;
-  --clr-1: #33ff8c;
-  --clr-2: #16e7e4b0;
-  --clr-3: #10cebe;
+  --clr-1: #33ff8bcf;
+  --clr-2: #b7fffea7;
+  --clr-3: #15e4d2db;
   --clr-4: hsla(154, 87%, 53%, 0.744);
 
   --blur: 1rem;
