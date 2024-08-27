@@ -65,11 +65,11 @@ div > {
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
 :root {
-  --bg: #000000;
+  --bg: #fbf9f9;
   --clr-1: #33ff8c;
   --clr-2: #0bc1beb0;
   --clr-3: #10cebe;
-  --clr-4: #13b56f;
+  --clr-4: hsl(154, 81%, 39%);
 
   --blur: 1rem;
   --fs: clamp(3rem, 8vw, 7rem);

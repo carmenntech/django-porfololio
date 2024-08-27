@@ -8,6 +8,7 @@ html, body, .page{
   -moz-transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
   -o-transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);  
   color: #fff;
+  background: rgb(0, 0, 0);
   overflow: hidden; 
 }
 
@@ -43,6 +44,7 @@ html, body, .page{
   -o-transform: translateX(-190%);
   transition-delay: .4s !important;
 }
+
 
 #t2:target #p1, 
 #t3:target #p1,
@@ -207,11 +209,11 @@ a {
 
 
 :root {
-  --bg: #000000;
+  --bg: #00000000;
   --clr-1: #33ff8c;
-  --clr-2: #0bc1beb0;
+  --clr-2: #16e7e4b0;
   --clr-3: #10cebe;
-  --clr-4: hsl(154, 81%, 39%);
+  --clr-4: hsla(154, 87%, 53%, 0.744);
 
   --blur: 1rem;
   --fs: clamp(3rem, 8vw, 7rem);
