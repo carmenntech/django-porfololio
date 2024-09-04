@@ -423,11 +423,7 @@ body {
     border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
   }
 }
-section {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+
 section::after {
   position: absolute;
   bottom: 0;
