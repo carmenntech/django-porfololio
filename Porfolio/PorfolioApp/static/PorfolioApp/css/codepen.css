@@ -12,7 +12,9 @@ html, body, .page{
   overflow: hidden; 
 }
 
-
+.bg-success {
+  background-color: #00d67d !important;
+}
 
 h3 {
   font-family: 'arial black';
