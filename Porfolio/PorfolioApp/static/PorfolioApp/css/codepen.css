@@ -14,12 +14,39 @@ html, body, .page{
 
 
 .carousel, .carousel-inner > .item > img {
-  height: 480px;
+  height: 470px;
 }
 
 
+.button-container{
+  margin-top: 15px;
+  margin-bottom: 10px;
+ 
+  
+}
+
+.animated-button {
+  padding: 5px 5px;
+  background-color: #dffffcdb;
+  border: 2px solid #0000001a;
+  cursor: pointer;
+}
 
 
+button.crimson-button:hover {
+  background-color: #cd58f1a5 ;
+  color: rgb(255, 255, 255);
+
+}
+
+.animated-button i {
+  margin-right: 1px;
+  transition: all 0.3s ease;
+}
+
+button.crimson-button:hover i.fa-github {
+  transform: rotate(-20deg);
+}
 
 .bg-success {
   background-color: #00d67d !important;
